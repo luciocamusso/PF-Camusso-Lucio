@@ -1,0 +1,58 @@
+/*ESTILOS INDEX*/
+.body-index {
+    background-color: black;
+}
+
+/*SLIDER AUTOMATICO CON FOTOS DEL AUTOR*/
+.slider-index li {
+    list-style-type: none;
+        span {
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            color: transparent;
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            opacity: 0;
+            animation: slider-index 28s linear infinite 0s;
+        }
+}
+.slider-index li:nth-child(1) span { 
+    background-image: url(../images/slider/slider-01.jpg);
+}
+.slider-index li:nth-child(2) span { 
+    background-image: url(../images/slider/slider-02.jpg);
+    animation-delay: 4s; 
+}
+.slider-index li:nth-child(3) span {
+    background-image: url(../images/slider/slider-03.jpg); 
+    animation-delay: 8s; 
+}
+.slider-index li:nth-child(4) span { 
+    background-image: url(../images/slider/slider-04.jpg);
+    animation-delay: 12s; 
+}
+.slider-index li:nth-child(5) span { 
+    background-image: url(../images/slider/slider-05.jpg);
+    animation-delay: 16s; 
+}
+.slider-index li:nth-child(6) span { 
+    background-image: url(../images/slider/slider-06.jpg);
+    animation-delay: 20s; 
+}
+.slider-index li:nth-child(7) span { 
+    background-image: url(../images/slider/slider-07.jpg);
+    animation-delay: 24s; 
+}
+/*ANIMACION PARA SLIDER AUTOMATICO*/
+@keyframes slider-index { 
+    0% {opacity: 0; animation-timing-function: ease-in;}
+    5% {opacity: 1; animation-timing-function: ease-out;}
+    15% {opacity: 1;}
+    25% {opacity: 0;}
+    100% {opacity: 0;}
+}

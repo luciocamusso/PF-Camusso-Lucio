@@ -1,0 +1,107 @@
+/*ESTILOS MODIFICADOS - NAVBAR BOOTSTRAP*/
+
+/*Estilos barra de navegacion*/
+.navbar-expand-lg {
+    height: 60px;
+    padding: 0;
+    margin-bottom: 10px;
+    background-color: transparent!important;
+}
+
+/*Estilos marca*/
+.navbar-brand {
+    margin-left: 16px;
+    font-family: 'Bebas Neue';
+    font-size: 28px;
+    letter-spacing: 0.5px;
+        &:hover {
+            color: darkgray !important;
+            transition: all 0.3s;
+        }
+}
+@media screen and (max-width: 576px) {
+    .navbar-brand {
+        font-size: 26px;
+    }
+}
+
+/*Estilos items de navegacion*/
+.nav-link {
+    width: fit-content;
+    padding: 5px !important;
+    margin: 3px 8px;
+    font-family: 'Bebas Neue';
+    font-size: 20px;
+    letter-spacing: 0.5px;
+        &:hover {
+            color: darkgray !important;
+            transition: all 0.3s;
+        }
+}
+.nav-item {
+    width: fit-content;
+}
+.navbar-nav {
+    padding-left: 16px;
+    align-items: center;
+}
+.dropdown-menu {
+    background-color: black;
+    border: solid 1px white;
+    min-width: 100%;
+    width: 100% !important;
+    text-align: center;
+    padding: 0px;
+}
+.dropdown-item {
+    color: white;
+    padding: 0px 3px;
+    margin: 8px 0px;
+    font-family: 'Bebas Neue';
+    font-size: 18px;
+    letter-spacing: 0.5px;
+        &:hover {
+            color: darkgray;
+            background-color: black;
+            transition: all 0.3s;
+        }
+}
+@media screen and (max-width: 576px) {
+    .nav-link {
+        font-size: 18px;
+    }
+    .dropdown-item {
+        font-size: 16px;
+    }
+}
+
+/*Estilos del menu responsive cuando se oculta tras el boton*/
+.text-bg-dark {
+    background-color: black !important;
+}
+.offcanvas-end {
+    width: 50% !important;
+}
+@media screen and (max-width: 400px) {
+    .offcanvas-end {
+        width: 100% !important;
+    }
+}
+.offcanvas-header {
+    justify-content: center;
+}
+
+/*Estilos del icono del boton de menu cuando se oculta*/
+.navbar-toggler {
+    border: solid 2px white;
+}
+.navbar-toggler-icon {
+    color: white !important;
+    opacity: 1;
+}
+.btn-close-white {
+    color: white !important;
+    opacity: 1;
+    margin: 0 !important;
+    padding: 0 !important;
+}

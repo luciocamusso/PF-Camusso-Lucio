@@ -1,0 +1,122 @@
+$ancho-carousel: 85%; /*Con esta altura la imagen se ajusta bien al alto buscado porque tiene relacion 2x1*/
+$ancho-carousel-reducido: 76%; /*Se reduce el tamaño del carousel porque la imagen tiene relacion 3x2 y no se ajusta bien al alto buscado*/
+@mixin align-justify-images {
+    align-self: center;
+    justify-self: center;
+} /*Define align y justify de image/carousel en el grid*/
+
+
+/*ESTILOS SECCIONES*/
+.imagen-seccion {
+    width: 60%;
+    height: auto;
+    display: block;
+    @include align-justify-images;
+    grid-area: imagen;
+    border: solid 5px black;
+}
+@media screen and (max-width: 576px) {
+    .imagen-seccion {
+        width: 70%;
+    } 
+}
+.link-video-youtube {
+    color: green;
+    text-decoration: none;
+        &:hover {
+            color: darkgrey;
+            transition: all 0.3s;
+        }
+}
+
+/*HEADER*/
+.header-seccion {
+    background-color: black;
+}
+
+/*ESTILOS TRABAJOS DE AUTOR - FOTOPERIODISMO*/
+.carousel {
+    width: $ancho-carousel;
+    border: solid 5px black;
+    @include align-justify-images;
+    grid-area: imagen;
+}
+.carousel-reducido {
+    width: $ancho-carousel-reducido;
+}
+.contenedor-carousel {
+    width: $ancho-carousel;
+    background-color: black;
+    @include align-justify-images;
+    display: flex;
+    justify-content: center;
+    grid-area: imagen;
+}
+@media screen and (max-width: 576px) {
+    .carousel {
+        width: $ancho-carousel+10%;
+    }
+    .carousel-reducido {
+        width: $ancho-carousel-reducido+10%;
+    }
+    .contenedor-carousel {
+        width: $ancho-carousel+10%;
+    }
+}
+.carousel-control-prev {
+    opacity: 1;
+}
+.carousel-control-next {
+    opacity: 1;
+}
+.carousel-control-prev-icon {
+    font-weight: 900;
+}
+
+/*ESTILOS CONTACTO*/
+.article-contacto {
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    color: white;
+    font-family: 'Averta Regular';
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 20px;
+    grid-template-areas: 
+        ". titulo ."
+        ". texto ."
+    ;
+}
+ul.lista-contacto {
+    margin: 0;
+    padding: 0;
+    grid-area: texto;
+    align-self: center;
+    justify-self: center;
+        li {
+            margin: 20px 0px;
+            list-style-type: none;
+            text-align: center;
+                a {
+                    text-decoration: none;
+                    color: white;
+                        &:hover {
+                            color: darkgrey;
+                            transition: all 0.3s;
+                        }
+                }
+        }
+}
+.medio-contacto {
+    font-family: 'Bebas Neue';
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+@media screen and (max-width: 576px) {
+    .medio-contacto {
+        font-size: 18px;
+    }
+}
